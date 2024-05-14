@@ -1,0 +1,5 @@
+(define (even? n) (= (remainder n 2) 0))
+(define (double x) (+ x x))
+(define (halve x) (/ x 2))
+(define (fast-mult-iter a n) (fast-mult-iter-impl a n 0))
+(define (fast-mult-iter-impl a n curr) (cond ((= n 0) curr) ((even? n) (fast-mult-iter-impl (double a) (halve n) curr)) (else (fast-mult-iter-impl (double a) (halve (- n 1)) (+ curr a)))))
