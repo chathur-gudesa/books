@@ -8,6 +8,9 @@ gt4 uut(.a(test_in0), .b(test_in1), .a_gt_b(test_out));
 
 initial 
 begin
+  $dumpfile("dump.vcd");
+  $dumpvars(0, gt4_testbench);
+
   test_in0 = 4'b0000; 
   test_in1 = 4'b0000; 
   #200 

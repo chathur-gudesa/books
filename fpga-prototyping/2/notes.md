@@ -90,3 +90,12 @@
 
 - user-constraint file 
 	- defines minimal clock frequency, signal to pin mappings
+
+- icarus-verilog
+	- first, file is preprocessed 
+	- then, compiled to internal format 
+	- then, elaborated to create hierarchies of modules and define scopes 
+	- then, passed to code generate to generate vvp text format
+	
+- vvp
+	- simulation runtime engine

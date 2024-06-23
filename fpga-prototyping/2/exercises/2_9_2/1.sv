@@ -11,9 +11,9 @@ module dec24 (
   output wire[3:0] bcode
 );
 
-assign bcode[0] = en & ~a[0] & ~a[0];
-assign bcode[1] = en & ~a[0] &  a[0];
-assign bcode[2] = en &  a[0] & ~a[0];
-assign bcode[3] = en &  a[0] &  a[0];
+assign bcode[0] = en & ~a[1] & ~a[0];
+assign bcode[1] = en & ~a[1] &  a[0];
+assign bcode[2] = en &  a[1] & ~a[0];
+assign bcode[3] = en &  a[1] &  a[0];
 
 endmodule

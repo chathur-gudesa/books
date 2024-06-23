@@ -8,6 +8,9 @@ gt2 uut(.a(test_in0), .b(test_in1), .a_gt_b(test_out));
 
 initial 
 begin
+  $dumpfile("dump.vcd");
+  $dumpvars(0, gt2_testbench);
+
   test_in0 = 2'b00; 
   test_in1 = 2'b00; 
   #200 

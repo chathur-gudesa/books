@@ -11,6 +11,9 @@ dec24 uut(.en(en), .a(test_in), .bcode(test_out));
 
 initial 
 begin
+  $dumpfile("dump.vcd");
+  $dumpvars(0, dec24_testbench);
+
   test_in = 2'b00; 
   #200 
 
@@ -23,6 +26,6 @@ begin
   test_in = 2'b11; 
   #200 
 
-  $stop;
+  $finish;
 end
 endmodule

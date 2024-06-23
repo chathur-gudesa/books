@@ -14,6 +14,9 @@ dec38 uut2(.en(no_en), .a(test_in), .bcode(test_out2));
 
 initial
 begin
+  $dumpfile("dump.vcd");
+  $dumpvars(0, dec38_testbench);
+
   test_in = 3'b000; 
   #200 
 

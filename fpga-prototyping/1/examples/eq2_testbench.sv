@@ -8,6 +8,9 @@ eq2 uut(.a(test_in0), .b(test_in1), .eq(test_out));
 
 initial 
 begin
+  $dumpfile("dump.vcd");
+  $dumpvars(0, eq2_testbench);
+
   test_in0 = 2'b00; 
   test_in1 = 2'b00; 
   #200 
